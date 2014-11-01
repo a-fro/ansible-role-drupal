@@ -17,7 +17,7 @@
     version={{ drupal_core_version }}
     update=no
     accept_hostkey=yes
-    dest={{ drupal_core_path }}
+    dest=/var/www/{{ drupal_domain }}
   when: drupal_site.stat.exists == false
 
 - name: Check if Drupal is already installed.
